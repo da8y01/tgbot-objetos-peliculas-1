@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
 
     <title>. : : Famous Objects from Classic Movies : : .</title>
 
@@ -18,7 +18,7 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="/stylesheets/jumbotron-narrow.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -36,7 +36,13 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Famous Objects from Classic Movies</h1>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Alternar (estado actual del robot: <%=state%>)</a></p>
+        <p>
+          <%if (state === 'on') { %>
+          <a class="btn btn-lg btn-success" href="#" role="button">Alternar (estado actual del robot: <%=state%>)</a>
+          <% } else {%>
+          <a class="btn btn-lg btn-danger" href="#" role="button">Alternar (estado actual del robot: <%=state%>)</a>
+          <% } %>
+        </p>
       </div>
     </div> <!-- /container -->
 
